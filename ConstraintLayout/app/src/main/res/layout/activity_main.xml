@@ -4,15 +4,75 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+
 	tools:context=".MainActivity">
 
-	<TextView
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="Hello World!"
+		android:orientation="vertical"
+		app:layout_constraintGuide_percent="0.5"/>
+
+
+	<androidx.constraintlayout.widget.Guideline
+		android:id="@+id/guideline2"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="#FFFFFF"
+		android:orientation="horizontal"
+		app:layout_constraintGuide_percent="0.3"/>
+
+	<Button
+		android:id="@+id/button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Top"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<Button
+		android:id="@+id/button3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/button"
+		android:layout_marginEnd="248dp"
+		android:layout_marginBottom="440dp"
+		android:text="Left below top"
 		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent" />
+
+	<Button
+		android:id="@+id/button2"
+		android:layout_width="407dp"
+		android:layout_height="55dp"
+		android:layout_below="@id/button"
+		android:text="Buttom"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		/>
+
+	<Button
+		android:id="@+id/button4"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="80dp"
+		android:text="Right above bottom"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.931"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:background="#FF6347"
+		app:layout_constraintBottom_toBottomOf="@id/guideline2"
+		app:layout_constraintHorizontal_bias="0.0"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
-		app:layout_constraintTop_toTopOf="parent" />
-
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
